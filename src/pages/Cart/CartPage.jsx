@@ -49,7 +49,7 @@ const CartPage = () => {
                 <div className={styles.image_block}>
                   {product.images.map((images) => {
                     if (images.color === "black") {
-                      return <img src={images.image} alt="" />;
+                      return <img key={new Date()} src={images.image} alt="" />;
                     }
                   })}
                 </div>
@@ -91,7 +91,7 @@ const CartPage = () => {
                     </tbody>
                   </table>
                   <div className={styles.next_func}>
-                    <button>Сохранить на потом</button>
+                    <button>{product.left <=10 ? <div>Почти распродано</div> : <div>На складе: {product.left}</div>}</button>
                     <button onClick={() => handleDelete(cartItem.productId)}>
                       Удалить
                     </button>
