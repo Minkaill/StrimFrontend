@@ -19,8 +19,9 @@ export const getFavorite = createAsyncThunk("get/favorite", async (_, thunkAPI) 
 })
 
 
-export const addProductInFavorite = createAsyncThunk("add/favorite", async ({productId}, thunkAPI) => {
+export const addProductInFavorite = createAsyncThunk("add/favorite", async (productId, thunkAPI) => {
     try {
+        console.log(productId)
         const response = await axios.post(`http://localhost:4000/favorite/add/${user}`, { product: productId})
         return response.data
     } catch (error) {
