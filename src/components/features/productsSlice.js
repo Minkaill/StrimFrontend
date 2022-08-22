@@ -4,7 +4,11 @@ import axios from "axios"
 
 const initialState = {
     products: [],
-    costums: []
+    costums: [],
+    bruks: [],
+    ochki: [],
+    rubashki: [],
+    chasi: []
 }
 
 
@@ -17,7 +21,7 @@ export const getProducts = createAsyncThunk("get/products", async (categoryId, t
     }
 })
 
-export const getBruks = createAsyncThunk("get/costums", async (_, thunkAPI) => {
+export const getBruks = createAsyncThunk("get/bruks", async (_, thunkAPI) => {
     try {
         const response = await axios.get("http://localhost:4000/product/bruks")
         return response.data
@@ -35,7 +39,7 @@ export const getObuv = createAsyncThunk("get/costums", async (_, thunkAPI) => {
     }
 })
 
-export const getOchki = createAsyncThunk("get/costums", async (_, thunkAPI) => {
+export const getOchki = createAsyncThunk("get/ochki", async (_, thunkAPI) => {
     try {
         const response = await axios.get("http://localhost:4000/product/ochki")
         return response.data
@@ -44,7 +48,7 @@ export const getOchki = createAsyncThunk("get/costums", async (_, thunkAPI) => {
     }
 })
 
-export const getRubashki = createAsyncThunk("get/costums", async (_, thunkAPI) => {
+export const getRubashki = createAsyncThunk("get/rubashki", async (_, thunkAPI) => {
     try {
         const response = await axios.get("http://localhost:4000/product/rubashki")
         return response.data
@@ -53,7 +57,7 @@ export const getRubashki = createAsyncThunk("get/costums", async (_, thunkAPI) =
     }
 })
 
-export const getChasi = createAsyncThunk("get/costums", async (_, thunkAPI) => {
+export const getChasi = createAsyncThunk("get/chasi", async (_, thunkAPI) => {
     try {
         const response = await axios.get("http://localhost:4000/product/chasi")
         return response.data
@@ -83,6 +87,18 @@ const productsSlice = createSlice({
         })
         .addCase(getCostums.fulfilled, (state, action) => {
             state.costums = action.payload
+        })
+        .addCase(getBruks.fulfilled, (state, action) => {
+            state.bruks = action.payload
+        })
+        .addCase(getOchki.fulfilled, (state, action) => {
+            state.ochki = action.payload
+        })
+        .addCase(getRubashki.fulfilled, (state, action) => {
+            state.rubashki = action.payload
+        })
+        .addCase(getChasi.fulfilled, (state, action) => {
+            state.chasi = action.payload
         })
     }
 })

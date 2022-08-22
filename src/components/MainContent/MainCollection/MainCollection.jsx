@@ -16,7 +16,7 @@ const MainCollection = () => {
         <h3>БРЕНДОВЫЕ ЧАСЫ</h3>
         <div className={styles.liniya}></div>
         <button>
-          <Link to="/catalog">КАТАЛОГ</Link>
+          <Link to="/clocks">КАТАЛОГ</Link>
         </button>
       </div>
     </div>

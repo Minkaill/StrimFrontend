@@ -34,6 +34,9 @@ const CartPage = () => {
 
   const favorite = useSelector((state) => state.favorite.favorite.products);
   const cart = useSelector((state) => state.cart.cart.products);
+      dispatch(deleteProductInBasket({productId}))
+  }
+  const favorite = useSelector((state) => state.favorite);
 
 
   console.log(favorite);

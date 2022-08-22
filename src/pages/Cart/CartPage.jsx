@@ -131,7 +131,7 @@ const CartPage = () => {
               <h3>ИТОГО ЗАКАЗА</h3>
               <div className={styles.itogo}>
                 <span>Промежуточная цена:</span>
-                <h2>{}</h2>
+                <h2></h2>
               </div>
               <div className={styles.btn_oplata}>
                 <Link to="/buy">

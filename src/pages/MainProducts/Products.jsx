@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./MainProducts.module.css";
 import { useEffect } from "react";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { getProducts } from "../../components/features/productsSlice";
 import {
   addProductInBasket,
   getCart,
 } from "../../components/features/cartSlice";
-import { addProductInFavorite } from "../../components/features/favoriteSlice";
 
 const Products = (props) => {
   const dispatch = useDispatch();
@@ -30,11 +29,8 @@ const Products = (props) => {
     dispatch(addProductInBasket({ productId }));
   };
 
-  const handleAddInFavorite = (productId) => {
-    dispatch(addProductInFavorite({ productId }));
-  };
-
   const buttonOff = props.cartInfo.find(item => item.productId === props.product._id)
+  if(props.product.size === "XL") {
 
   return (
     <div className={styles.product}>
@@ -55,10 +51,34 @@ const Products = (props) => {
             Купить
           </button>
           <FcLikePlaceholder fontSize={"2rem"} onClick={() => handleAddInFavorite(props.product._id)} cursor='pointer' className={styles.like}/>
+      return (
+        <div className={styles.product}>
+          <div className={styles.image}>
+            <div>
+                {props.images.map((item) => {
+                    if(item.color === 'black') {
+                        return (
+                            <img src={item.image} alt="" />
+                        )
+                    }
+                })}
+            </div>
+            <div class>
+              <button></button>
+            </div>
+            <div className={styles.product_info}>
+              <span>{props.product.name}</span>
+              <span>{props.product.price}₽</span>
+            </div>
+            <div className={styles.btn}>
+              <button disabled={!props.product.left || buttonOff} onClick={() => handleAddInBasket(props.product._id)}>
+                Купить
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      );
+  }
 };
 
 export default Products;

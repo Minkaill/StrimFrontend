@@ -10,11 +10,17 @@ import { useSelector } from "react-redux";
 import MyTeam from "./pages/my-team/MyTeam";
 import MainProducts from "./pages/MainProducts/MainProducts";
 import CartPage from "./pages/Cart/CartPage";
-import AllProducts from "./pages/MainProducts/Categories/AllProducts";
 import CabinetPage from "./pages/Cabinet/CabinetPage";
 import CabinetChange from "./pages/Cabinet/CabinetChange";
 import BuyPage from "./pages/Buy/BuyPage";
 import FavoritePage from './pages/Favorite/FavoritePage';
+import Costums from './pages/MainProducts/Category/Costums';
+import Bruks from "./pages/MainProducts/Category/Bruks";
+import Ochki from './pages/MainProducts/Category/Ochki';
+import Rubashki from "./pages/MainProducts/Category/Rubashki";
+import Chasi from './pages/MainProducts/Category/Chasi';
+import News from "./pages/News/News";
+import Kontact from "./pages/Kontact/Kontact";
 
 function App() {
   const token = useSelector((state) => state.user.token);
@@ -37,7 +43,6 @@ function App() {
           <Route path="/my-team" element={<MyTeam />} />
           <Route path="/products" element={<MainProducts />} />
           <Route path="/cart" element={<Navigate to="/register" />}></Route>
-          <Route path="/all-tovars" element={<AllProducts />} />
           <Route path="/cabinet" element={<Navigate to="/register" />}></Route>
           <Route path="/cabinetchange" element={<Navigate to="/register" />}></Route>
           <Route path="/buy" element={<Navigate to="/register" />}></Route>
@@ -57,12 +62,18 @@ function App() {
         <Route path="/auth" element={<Navigate to="/" />} />
         <Route path="/my-team" element={<MyTeam />} />
         <Route path="/products" element={<MainProducts />} />
+        <Route path="/kostums" element={<Costums />}/>
+        <Route path="/bruks" element={<Bruks />} />
+        <Route path="/ochki" element={<Ochki />} />
+        <Route path="/rubashki" element={<Rubashki />} />
+        <Route path="/clocks" element={<Chasi />} />
         <Route path="/cart" element={<CartPage />}></Route>
-        <Route path="/all-tovars" element={<AllProducts />} />
         <Route path="/cabinet" element={<CabinetPage />}></Route>
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         <Route path="/buy" element={<BuyPage />}></Route>
         <Route path="/favorite" element={<FavoritePage />}></Route>
+        <Route path="/news" element={<News/>} />
+        <Route path="/kontact" element={<Kontact/>}/>
       </Routes>
       <Footer />
     </div>
