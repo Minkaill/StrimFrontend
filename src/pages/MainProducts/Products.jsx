@@ -54,7 +54,7 @@ const Products = (props) => {
           <button disabled={buttonOff} onClick={() => handleAddInBasket(props.product._id)}>
             Купить
           </button>
-          <FcLikePlaceholder fontSize={"2rem"} onClick={() => handleAddInFavorite(props.product._id)} cursor='pointer'/>
+          <FcLikePlaceholder fontSize={"2rem"} onClick={() => handleAddInFavorite(props.product._id)} cursor='pointer' className={styles.like}/>
         </div>
       </div>
     </div>
