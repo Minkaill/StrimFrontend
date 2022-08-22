@@ -31,6 +31,7 @@ export const addProductInFavorite = createAsyncThunk("add/favorite", async ({pro
 
 export const deleteProductFromFavorite = createAsyncThunk("delete/favorite", async ({productId}, thunkAPI) => {
     try {
+        console.log(productId)
         const response = await axios.delete(`http://localhost:4000/favorite/delete/${user}`, { data: { product: productId}})
         console.log(user)
         console.log(productId)

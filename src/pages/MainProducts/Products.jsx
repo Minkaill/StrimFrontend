@@ -32,6 +32,25 @@ const Products = (props) => {
   const buttonOff = props.cartInfo.find(item => item.productId === props.product._id)
   if(props.product.size === "XL") {
 
+  return (
+    <div className={styles.product}>
+      <div className={styles.image}>
+        <div>
+          <img src={props.images[0].image}/>
+        </div>
+        <div class>
+          <button></button>
+        </div>
+        <div className={styles.product_info}>
+          <span>{props.product.size}</span>
+          <span>{props.product.name}</span>
+          <span>{props.product.price}₽</span>
+        </div>
+        <div className={styles.btn}>
+          <button disabled={buttonOff} onClick={() => handleAddInBasket(props.product._id)}>
+            Купить
+          </button>
+          <FcLikePlaceholder fontSize={"2rem"} onClick={() => handleAddInFavorite(props.product._id)} cursor='pointer' className={styles.like}/>
       return (
         <div className={styles.product}>
           <div className={styles.image}>
