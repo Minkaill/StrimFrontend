@@ -35,7 +35,7 @@ export const deleteProductFromFavorite = createAsyncThunk("delete/favorite", asy
         console.log(productId)
         const response = await axios.delete(`http://localhost:4000/favorite/delete/${user}`, { data: { product: productId}})
         console.log(user)
-        console.log(productId)
+        console.log(response.data)
         return response.data
     } catch (error) {
         thunkAPI.rejectWithValue(error.message)
@@ -51,7 +51,14 @@ const favoriteSlice = createSlice({
         builder
         .addCase(getFavorite.fulfilled, (state, action) => {
             state.favorite = action.payload
-            console.log(action)
+            console.log(action.payload)
+        })
+        builder
+        .addCase(deleteProductFromFavorite.fulfilled, (state, action) => {
+            console.log(action.payload)
+            // console.log(state.favorite)
+            state.favorite = action.payload
+
         })
     }
 })
