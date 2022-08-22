@@ -7,7 +7,7 @@ const Categories = () => {
     {
       id: 2,
       title: "Костюмы",
-      route: "kostums"
+      route: "products"
     },
 
     {
@@ -25,7 +25,7 @@ const Categories = () => {
     {
       id: 5,
       title: "Рубашки",
-      route: "rubashks"
+      route: "rubashki"
     },
 
     {
