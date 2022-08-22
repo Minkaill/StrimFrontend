@@ -19,6 +19,8 @@ import Bruks from "./pages/MainProducts/Category/Bruks";
 import Ochki from './pages/MainProducts/Category/Ochki';
 import Rubashki from "./pages/MainProducts/Category/Rubashki";
 import Chasi from './pages/MainProducts/Category/Chasi';
+import News from "./pages/News/News";
+import Kontact from "./pages/Kontact/Kontact";
 
 function App() {
   const token = useSelector((state) => state.user.token);
@@ -70,6 +72,8 @@ function App() {
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
         <Route path="/buy" element={<BuyPage />}></Route>
         <Route path="/favorite" element={<FavoritePage />}></Route>
+        <Route path="/news" element={<News/>} />
+        <Route path="/kontact" element={<Kontact/>}/>
       </Routes>
       <Footer />
     </div>
