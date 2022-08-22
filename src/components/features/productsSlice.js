@@ -8,7 +8,8 @@ const initialState = {
     bruks: [],
     ochki: [],
     rubashki: [],
-    chasi: []
+    chasi: [],
+    obuv: []
 }
 
 
@@ -30,7 +31,7 @@ export const getBruks = createAsyncThunk("get/bruks", async (_, thunkAPI) => {
     }
 })
 
-export const getObuv = createAsyncThunk("get/costums", async (_, thunkAPI) => {
+export const getObuv = createAsyncThunk("get/obuv", async (_, thunkAPI) => {
     try {
         const response = await axios.get("http://localhost:4000/product/obuv")
         return response.data
@@ -99,6 +100,9 @@ const productsSlice = createSlice({
         })
         .addCase(getChasi.fulfilled, (state, action) => {
             state.chasi = action.payload
+        })
+        .addCase(getObuv.fulfilled, (state, action) => {
+            state.obuv = action.payload
         })
     }
 })

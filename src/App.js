@@ -21,6 +21,7 @@ import Rubashki from "./pages/MainProducts/Category/Rubashki";
 import Chasi from './pages/MainProducts/Category/Chasi';
 import News from "./pages/News/News";
 import Kontact from "./pages/Kontact/Kontact";
+import Obuv from "./pages/MainProducts/Category/Obuv";
 
 function App() {
   const token = useSelector((state) => state.user.token);
@@ -65,6 +66,7 @@ function App() {
         <Route path="/kostums" element={<Costums />}/>
         <Route path="/bruks" element={<Bruks />} />
         <Route path="/ochki" element={<Ochki />} />
+        <Route path="/obuv" element={<Obuv />}/>
         <Route path="/rubashki" element={<Rubashki />} />
         <Route path="/clocks" element={<Chasi />} />
         <Route path="/cart" element={<CartPage />}></Route>

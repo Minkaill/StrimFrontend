@@ -5,36 +5,8 @@ import { FaCcMastercard, FaCcPaypal } from "react-icons/fa";
 import { AddressSuggestions } from "react-dadata";
 import "react-dadata/dist/react-dadata.css";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 const BuyPage = () => {
-  const [modalShow, setModalShow] = React.useState(false);
-  function MyVerticallyCenteredModal(props) {
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Заказ отправлен!</h4>
-          <p>
-            Ваш заказ был успешно получен, примерная дата доставки 30.08.2022
-            14:50
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
 
   const [price, setPrice] = useState(0);
   const [time, setTime] = useState("");
@@ -167,14 +139,7 @@ const BuyPage = () => {
         </div>
       </div>
       <div className={styles.oplata}>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-          ПОДТВЕРДИТЬ ЗАКАЗ
-        </Button>
-
-        <MyVerticallyCenteredModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-        />
+          <button>ПОТДВЕРДИТЬ ЗАКАЗ</button>
       </div>
     </div>
   );
