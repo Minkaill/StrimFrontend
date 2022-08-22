@@ -34,103 +34,97 @@ const CartPage = () => {
 
   const favorite = useSelector((state) => state.favorite.favorite.products);
   const cart = useSelector((state) => state.cart.cart.products);
-      dispatch(deleteProductInBasket({productId}))
-  }
-  const favorite = useSelector((state) => state.favorite);
 
 
-  console.log(favorite);
   if (favorite) {
     const favoriteProducts = favorite.map((product) => {
-        if(product.left === 0){
-            return( 
-                <>
-          <div className={styles.line}></div>
-          <div className={styles.card_prod}>
-            <div className={styles.image_block}>
-              {product.images.map((images) => {
-                if (images.color === "black") {
-                  return <img src={images.image} alt="" />;
-                }
-              })}
-            </div>
-            <div className={styles.info_prices}>
-              <div className={styles.prod_name}>
-                <span>{product.name}</span>
+      if (product.left === 0) {
+        return (
+          <>
+            <div className={styles.line}></div>
+            <div className={styles.card_prod}>
+              <div className={styles.image_block}>
+                {product.images.map((images) => {
+                  if (images.color === "black") {
+                    return <img src={images.image} alt="" />;
+                  }
+                })}
               </div>
-              <table className={styles.table}>
-                <thead>
-                  <tr className={styles.tr}>
-                    <th>Размер</th>
-                    <th>Цена</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className={styles.tr}>
-                    <td>{product.size}</td>
-                    <td>{product.price} ₽</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className={styles.next_func}>
-                <button>
-                  Нет на складе
-                </button>
-                <button onClick={() => handleDelete(product._id)}>
-                  Удалить
-                </button>
-              </div>
-            </div>
-          </div>
-        </>
-            )
-        }else{
-      return (
-        <>
-          <div className={styles.line}></div>
-          <div className={styles.card_prod}>
-            <div className={styles.image_block}>
-              {product.images.map((images) => {
-                if (images.color === "black") {
-                  return <img src={images.image} alt="" />;
-                }
-              })}
-            </div>
-            <div className={styles.info_prices}>
-              <div className={styles.prod_name}>
-                <span>{product.name}</span>
-              </div>
-              <table className={styles.table}>
-                <thead>
-                  <tr className={styles.tr}>
-                    <th>Размер</th>
-                    <th>Цена</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className={styles.tr}>
-                    <td>{product.size}</td>
-                    <td>{product.price} ₽</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className={styles.next_func}>
-                <button onClick={() => handleAddInBasket(product._id)}>
-                  Добавить в корзину
-                </button>
-                <button onClick={() => handleDelete(product._id)}>
-                  Удалить
-                </button>
+              <div className={styles.info_prices}>
+                <div className={styles.prod_name}>
+                  <span>{product.name}</span>
+                </div>
+                <table className={styles.table}>
+                  <thead>
+                    <tr className={styles.tr}>
+                      <th>Размер</th>
+                      <th>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className={styles.tr}>
+                      <td>{product.size}</td>
+                      <td>{product.price} ₽</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div className={styles.next_func}>
+                  <button>Нет на складе</button>
+                  <button onClick={() => handleDelete(product._id)}>
+                    Удалить
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </>
-      );
-            }
+          </>
+        );
+      } else {
+        return (
+          <>
+            <div className={styles.line}></div>
+            <div className={styles.card_prod}>
+              <div className={styles.image_block}>
+                {product.images.map((images) => {
+                  if (images.color === "black") {
+                    return <img src={images.image} alt="" />;
+                  }
+                })}
+              </div>
+              <div className={styles.info_prices}>
+                <div className={styles.prod_name}>
+                  <span>{product.name}</span>
+                </div>
+                <table className={styles.table}>
+                  <thead>
+                    <tr className={styles.tr}>
+                      <th>Размер</th>
+                      <th>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className={styles.tr}>
+                      <td>{product.size}</td>
+                      <td>{product.price} ₽</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div className={styles.next_func}>
+                  <button onClick={() => handleAddInBasket(product._id)}>
+                    Добавить в корзину
+                  </button>
+                  <button onClick={() => handleDelete(product._id)}>
+                    Удалить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      }
     });
-
+  
     return (
       <div className={styles.back}>
         <div className={styles.title}>
