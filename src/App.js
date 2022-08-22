@@ -14,6 +14,11 @@ import CabinetPage from "./pages/Cabinet/CabinetPage";
 import CabinetChange from "./pages/Cabinet/CabinetChange";
 import BuyPage from "./pages/Buy/BuyPage";
 import FavoritePage from './pages/Favorite/FavoritePage';
+import Costums from './pages/MainProducts/Category/Costums';
+import Bruks from "./pages/MainProducts/Category/Bruks";
+import Ochki from './pages/MainProducts/Category/Ochki';
+import Rubashki from "./pages/MainProducts/Category/Rubashki";
+import Chasi from './pages/MainProducts/Category/Chasi';
 import News from "./pages/News/News";
 import Kontact from "./pages/Kontact/Kontact";
 
@@ -57,6 +62,11 @@ function App() {
         <Route path="/auth" element={<Navigate to="/" />} />
         <Route path="/my-team" element={<MyTeam />} />
         <Route path="/products" element={<MainProducts />} />
+        <Route path="/kostums" element={<Costums />}/>
+        <Route path="/bruks" element={<Bruks />} />
+        <Route path="/ochki" element={<Ochki />} />
+        <Route path="/rubashki" element={<Rubashki />} />
+        <Route path="/clocks" element={<Chasi />} />
         <Route path="/cart" element={<CartPage />}></Route>
         <Route path="/cabinet" element={<CabinetPage />}></Route>
         <Route path="/cabinetchange" element={<CabinetChange />}></Route>
