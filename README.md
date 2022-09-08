@@ -4,7 +4,7 @@
 
 - [Турпал](https://github.com/taraevTurpalAli)
 - [Рабек](https://github.com/JhozevJoestar)
-- [Мохьмад](https://github.com/Minor95)
+- [Магомед](https://github.com/Minor95)
 - [Султан](https://github.com/SultanHasanov)
 
 
