@@ -3,9 +3,9 @@
 <h2>Наша Команда:</h2>
 
 - [Турпал](https://github.com/taraevTurpalAli) - Backend
-- [Рабек](https://github.com/JhozevJoestar)
-- [Магомед](https://github.com/Minor95)
-- [Султан](https://github.com/SultanHasanov)
+- [Рабек](https://github.com/JhozevJoestar) - Frontend
+- [Магомед](https://github.com/Minor95) - SocketIo(Chat)
+- [Султан](https://github.com/SultanHasanov) - Frontend
 
 
 ***
