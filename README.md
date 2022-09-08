@@ -3,17 +3,16 @@
 <h2>Наша Команда:</h2>
 
 - [Турпал](https://github.com/taraevTurpalAli)
+- [Рабек](https://github.com/JhozevJoestar)
+- [Мохьмад](https://github.com/Minor95)
+- [Султан](https://github.com/SultanHasanov)
 
 
 ***
-## Мои проекты:
+## Моя роль в проекте:
 
 
-* #### Отель Turamisumo - место отдыха клиентов, бронирование отелей и столиков ресторана. Территория для семейного отдыха!
-
-[client-code](https://github.com/Minkaill/TuramisumoFrontend.git)
-
-[backend-code](https://github.com/Minkaill/Turamisumo.git)
+* #### Тимлид - следил за командой, исравление ошибок, принимал пуллреквесты, а также код ревью над кодами.
 
 ***
 
