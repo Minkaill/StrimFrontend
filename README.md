@@ -2,7 +2,7 @@
 
 <h2>Наша Команда:</h2>
 
-- [Турпал](https://github.com/taraevTurpalAli)
+- [Турпал](https://github.com/taraevTurpalAli) TeamLead
 - [Рабек](https://github.com/JhozevJoestar)
 - [Магомед](https://github.com/Minor95)
 - [Султан](https://github.com/SultanHasanov)
