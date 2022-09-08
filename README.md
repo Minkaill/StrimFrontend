@@ -6,6 +6,7 @@
 - [Рабек](https://github.com/JhozevJoestar) - Frontend
 - [Магомед](https://github.com/Minor95) - SocketIo(Chat)
 - [Султан](https://github.com/SultanHasanov) - Frontend
+- [Минкаил](https://github.com/Minkaill) - Teamlead
 
 
 ***
