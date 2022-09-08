@@ -17,12 +17,5 @@
 ***
 
 
-* #### Mister - магазин мужской классической и брендовой одежды. Часы, ремни, галстуки, рубашки, брюки и обувь. Все для мужчин!
-
-[client-code](https://github.com/Minkaill/StrimFrontend.git)
-
-[backend-code](https://github.com/Minkaill/StrimBackend.git)
-
-***
 ## Связь со мной: 
 [![Telegram](https://img.shields.io/badge/Telegram-111111?style=for-the-badge&logo=telegram)](https://t.me/fringle228)
